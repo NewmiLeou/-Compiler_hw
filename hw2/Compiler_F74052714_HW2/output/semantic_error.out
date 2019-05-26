@@ -1,0 +1,76 @@
+0: /*
+1: 
+2:  * 2019 Spring Compiler Course Assignment 2 
+3:  */
+4: 
+5: float c = 1.5;
+6: 
+7: bool loop(int n, int m) {
+8:     while (n > m) {
+9:         n--;
+10:     }
+11:      true;
+
+Index     Name      Kind        Type      Scope     Attribute 
+
+0         n         parameter   int       1         
+1         m         parameter   int       1         
+
+12: }
+13: 
+14: int main() {
+15:     // Declaration
+16:     int x;
+17:     int i;
+18:     int a = 5;
+19: 
+20:     // if condition
+21:     if (a > 10) {
+22:         x += a;
+23:         // Undeclared variable
+24:         print(b);
+25:     } else {
+25:         x = a % 10 + 10 * 7; /*
+26:  Arithmetic */
+27:     }
+28:     print("");
+29: 
+30:     // Redeclare variable
+
+|-----------------------------------------------|
+| Error found in line 30:     float a = 1.0;
+| Redeclared variable <variable_name>
+|-----------------------------------------------|
+
+31:     float a = 1.0;
+
+|-----------------------------------------------|
+| Error found in line 31:     t
+| Undeclared variable <variable_name>
+|-----------------------------------------------|
+
+
+|-----------------------------------------------|
+| Error found in line 31:     t = 3;
+| Undeclared variable <variable_name>
+|-----------------------------------------------|
+
+32:     t = 3;
+33:      0; 
+
+Index     Name      Kind        Type      Scope     Attribute 
+
+0         x         variable    int       1         
+1         i         variable    int       1         
+2         a         variable    int       2         
+
+34: }
+
+Index     Name      Kind        Type      Scope     Attribute 
+
+0         c         variable    float     0                   
+1         loop      function    bool      0         int,int   
+2         main      function    int       0                   
+
+
+Total lines: 34 
