@@ -1,0 +1,38 @@
+; int a = 6;
+; int b;
+; void main() {
+;    int d;
+;    d = a + 6;
+;    print(d);
+;    return;
+; }
+;int a;
+;int main(){
+;	int i = 5.1; local only i = 5
+;	int b = 1;
+;	int c = b++; ++/-- only appear the end, b=2 c=1
+;	string b = “hello”; ldc "hello" istore 0(astore)
+;   a = 6;
+;}
+;ldc 6
+;putstatic compiler_hw3/a I
+
+.class public compiler_hw3
+.super java/lang/Object
+.field public static a I = 6
+.field public static b I
+.method public static main([Ljava/lang/String;)V
+.limit stack 50
+.limit locals 50
+	ldc 0
+	istore 0
+	getstatic compiler_hw3/a I
+	ldc 6
+	iadd
+	istore 0
+	iload 0
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+	invokevirtual java/io/PrintStream/println(I)V
+	return
+.end method
